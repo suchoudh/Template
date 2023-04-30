@@ -1,0 +1,13 @@
+This repository contains all the code examples and lab solutions written 
+during the live class:
+
+Hands-on Software Design
+offered online for O'Reilly Online Training
+by Venkat Subramaniam
+
+Thank you for attending.
+
+Venkat Subramaniam
+Agile Developer, Inc.
+venkats@agiledeveloper.com
+@venkat_s
