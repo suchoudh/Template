@@ -1,15 +1,17 @@
 #!/usr/bin/bash
-# Enter how much time you will need to complete the task in hand 
-# when you come back to stop it see how far off is your estimate. 
-# Did you do the work in specefied time or did you need less or more minutes 
-# Get this forecasting power right .. this will be a superpower for you in using the pomodoro technique
-# 20 min work 5 min MANDATORY break and there can be time when you are niether on break NOR on a task and that is OK too. 
-COUNTER=$1
-COUNTER=$(( COUNTER * 60 ))
 
+COUNTER=$1
+TASKNOTE=$2
+COUNTER=$(( COUNTER * 60 ))
+PREDICTED=$COUNTER
+cat tmp.log >> forecast.log   # Concatenate to old logs 
 while true
 do
 	echo $COUNTER seconds remaining in break
 	COUNTER=$(( COUNTER - 1 ))
-	sleep 1
+    echo Predicting task  $2  to require  $1 minutes but took $COUNTER seconds more `date` > tmp.log  # tmp.log contains last entry
+    sleep 1
 done
+
+#echo $COUNTER   # both these lines are not shown 
+#echo $2  to require this time.$1 deviation was $COUNTER 
