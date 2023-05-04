@@ -1,7 +1,7 @@
 export DATETAG="$(date +'%Y_%m_%d_%H_%M')"
-export DIRNAME=$DATETAG"_AUTO"
+export DIRNAME=$DATETAG"_AUTOv1"
 echo $DIRNAME
 mkdir $DIRNAME
-cp -R ~/Documents/Template/CopyOnlyThis v1"$DIRNAME"/.
+cp -R ~/Documents/Template/CopyOnlyThis "$DIRNAME"/.
 touch "$DIRNAME"/"readme$DATETAG.md"
-cat ~/Documents/Template/CopyOnlyThis/readmeDOLLARDATETAG.md >>$DIRNAME/"readme$DATETAG.md"
+cat ~/Documents/Template/CopyOnlyThis/readmeClone.md >>$DIRNAME/"readme$DATETAG.md"
