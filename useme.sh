@@ -1,5 +1,5 @@
 export DATETAG="$(date +'%Y_%m_%d_%H_%M')"
-export DIRNAME="$DATETAG_AUTO"
+export DIRNAME=$DATETAG"_AUTO"
 echo $DIRNAME
 mkdir $DIRNAME
 cp -R ~/Documents/Template/CopyOnlyThis "$DIRNAME"/.
