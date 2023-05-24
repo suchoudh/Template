@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 COUNTER=$1
 TASKNOTE=$2
