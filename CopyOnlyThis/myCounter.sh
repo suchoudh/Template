@@ -13,7 +13,7 @@ do
 	z=$(($COUNTER / 60))
 
 
-if [ $COUNTER -lt 60 ]    # within a min is bulls eye 
+if [ $COUNTER -lt -60 ]    # within a min is bulls eye 
 then
     echo Predicting task  $2  to require  $1 minutes but took $COUNTER seconds MORE $z min on `date` > tmp.log  #
 elif [ $COUNTER -gt 60 ]
