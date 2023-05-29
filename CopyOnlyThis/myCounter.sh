@@ -1,9 +1,10 @@
 #!/bin/bash
 
+
 COUNTER=$1
 TASKNOTE=$2
+PREDICTED=$1
 COUNTER=$(( COUNTER * 60 ))
-PREDICTED=$COUNTER
 touch tmp.log 
 cat tmp.log >> forecast.log   # Concatenate to old logs 
 while true
@@ -11,8 +12,9 @@ do
 	echo $COUNTER seconds remaining in break
 	COUNTER=$(( COUNTER - 1 ))
 	z=$(($COUNTER / 60))
-
-
+	Actual=$(($PREDICTED-$z))
+	echo $Actual
+	
 if [ $COUNTER -lt -60 ]    # within a min is bulls eye 
 then
     echo Predicting task  $2  to require  $1 minutes but took $COUNTER seconds MORE $z min on `date` > tmp.log  #
