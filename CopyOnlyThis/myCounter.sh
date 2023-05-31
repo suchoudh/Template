@@ -9,7 +9,7 @@ do
 	echo $COUNTER seconds remaining in $TASKNOTE for mandatory break 
 	COUNTER=$(( COUNTER - 1 ))
 	z=$(($COUNTER / 60))
-	Actual=$(($PREDICTED-$z))
+	Actual=$(($PREDICTED-$z))   # minus as my z is negative and --=+ 
 #	echo $Actual
 	
 if [ $COUNTER -lt -60 ]    # within a min is bulls eye 
