@@ -10,16 +10,17 @@ do
 	COUNTER=$(( COUNTER - 1 ))
 	z=$(($COUNTER / 60))
 	Actual=$(($PREDICTED-$z))   # minus as my z is negative and --=+ 
+	Percentage=$((($PREDICTED-$z)*100/$PREDICTED))   # minus as my z is negative and --=+ 
 #	echo $Actual
 	
 if [ $COUNTER -lt -60 ]    # within a min is bulls eye 
 then
-    echo Predicted time for  $TASKNOTE :$1  Actual :: $Actual ..  took $COUNTER seconds MORE  on `date` > tmp.log  #
+    echo $Percentage percent MORE Predicted time for  $TASKNOTE :$1  Actual :: $Actual ..  took $COUNTER seconds MORE  on `date` > tmp.log  #
 elif [ $COUNTER -gt 60 ]
 then
-    echo Predicting time for $TASKNOTE : $1  Actual :: $Actual ...  took $COUNTER seconds LESS on `date` > tmp.log  # 
+    echo $Percentage percent LESS Predicting time for $TASKNOTE : $1  Actual :: $Actual ...  took $COUNTER seconds LESS on `date` > tmp.log  # 
 else
-    echo BULLSEYE, Prediction of   $2  to require  $1 Good Job Sunil on  :: `date` > tmp.log  # 
+    echo $Percentage percent BULLSEYE, Prediction of   $2  to require  $1 Good Job Sunil on  :: `date` > tmp.log  # 
 fi
 
 sleep 1
