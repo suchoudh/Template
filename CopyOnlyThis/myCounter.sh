@@ -4,6 +4,7 @@ PREDICTED=$1
 COUNTER=$(( COUNTER * 60 ))
 touch tmp.log 
 cat tmp.log >> forecast.log   # Concatenate to old logs 
+cat tmp.log >> $LOGGER/forecast.log   # Concatenate to logger file as well  
 while true
 do
 	echo $COUNTER seconds remaining in $TASKNOTE for mandatory break 
