@@ -7,7 +7,7 @@ cat tmp.log >> forecast.log   # Concatenate to old logs
 cat tmp.log >> $LOGGER/forecast.log   # Concatenate to logger file as well  
 while true
 do
-	echo $COUNTER seconds remaining in $TASKNOTE for mandatory break 
+	echo $COUNTER seconds remaining in $TASKNOTE for mandatory break :: press q/Q to quit
 	COUNTER=$(( COUNTER - 1 ))
 	z=$(($COUNTER / 60))
 	Actual=$(($PREDICTED-$z))   # minus as my z is negative and --=+ 
