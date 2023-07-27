@@ -45,6 +45,9 @@ sleep 1
     if [[ $input = "q" ]] || [[ $input = "Q" ]]; then
 # The following line is for the prompt to appear on a new line.
         echo
+	cat tmp.log >> forecast.log   # Concatenate to old logs 
+	cat tmp.log >> $LOGGER/forecast.log   # Concatenate to logger file as well  
+	echo --- flushed at `date`---  >tmp.log 
         break 
     fi
 done
