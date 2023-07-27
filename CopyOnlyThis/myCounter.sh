@@ -15,7 +15,7 @@ PREDICTED=$1
 COUNTER=$(( COUNTER * 60 ))
 touch tmp.log 
 cat tmp.log >> forecast.log   # Concatenate to old logs 
-#cat tmp.log >> $LOGGER/forecast.log   # Concatenate to logger file as well  
+cat tmp.log >> $LOGGER/forecast.log   # Concatenate to logger file as well  
 while true
 do
 #	echo $COUNTER seconds remaining in $TASKNOTE for mandatory break :: press q/Q to quit  # this line colour to change based on 
@@ -27,14 +27,14 @@ do
 	
 if [ $COUNTER -lt -60 ]    # within a min is bulls eye 
 then
-    echo -e "${RED} $Percentage MORE predicted time for tasknote $TASKNOTE:$1 Actual ::$Actual .. took $COUNTER secs MORE on `date` ${NC}" 
+    echo -e "${RED} $Percentage % elapsed time for TASK $TASKNOTE. Used $Actual minutes MORE from Allocated $1 minutes.. took $COUNTER secs MORE on `date` ${NC}" 
     echo $Percentage percent MORE Predicted time for  $TASKNOTE :$1  Actual :: $Actual ..  took $COUNTER seconds MORE  on `date` > tmp.log  #
 elif [ $COUNTER -gt 60 ]
 then
-    echo -e "${GREEN} $Percentage MORE predicted time for tasknote $TASKNOTE:$1 Actual ::$Actual .. took $COUNTER secs MORE on `date` ${NC}" 
+    echo -e "${GREEN} $Percentage % elapsed time  for Task $TASKNOTE. Used $Actual minutes of Allocated ::$1 minutes..took $COUNTER secs LESS on `date` ${NC}" 
     echo $Percentage percent LESS Predicting time for $TASKNOTE : $1  Actual :: $Actual ...  took $COUNTER seconds LESS on `date` > tmp.log  # 
 else
-    echo -e "${PURPLE} $Percentage percent BULLSEYE, Prediction of $2 to require $1 Good Job Sunil on ::  `date` ${NC}" 
+    echo -e "${PURPLE} $Percentage % elapsed time for Task $TASKNOTE. Used $Actual  minutes of Allocated $1 minutes .. Good Job Sunil  on ::  `date` ${NC}" 
     echo $Percentage percent BULLSEYE, Prediction of   $2  to require  $1 Good Job Sunil on  :: `date` > tmp.log  # 
 fi
 
