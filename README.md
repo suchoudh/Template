@@ -78,7 +78,7 @@ Linux Commands frequently used by Linux Sysadmins – Part 1:
 69. usermod – used to modify or change any attributes of an existing user account.
 70. vi – text editor.
 71. cat – display file contents.
-72. tac – output file contents, in reverse.
+72. tac – output file contents, in reverse.   (top line is bottom line. You might want rev command instead )
 73. more – display file contents one screen/page at a time.
 74. less – similar to the more command with additional features.
 75. tail – used to display the tail end of a text file or piped data.
