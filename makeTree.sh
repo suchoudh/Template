@@ -1,8 +1,5 @@
-
-export DIRNAME="$(date +'%Y_%m_%d_%H_%M')_AUTO"
-export DATETAG="$(date +'%Y_%m_%d_%H_%M')"
-# mkdir $DIRNAME
-# cp -R ~/Documents/Template/CopyThis "$DIRNAME"/.
-# touch "$DIRNAME"/"readme$DATETAG.md"
-tree > dirTree$DATETAG.lst  
-
+UTC=`date +%s`
+>dooTree$UTC.lst
+du -h --max-depth=1 >>dooTree$UTC.lst
+echo ----------- >> dooTree$UTC.lst
+tree -L 3 . >>dooTree$UTC.lst
