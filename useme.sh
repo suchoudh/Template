@@ -25,7 +25,7 @@ if [[ $? -eq 0 ]]; then
 	rm makeTree.sh
 	rm myCounter.sh
 	#rm useme.sh
-	rm warikoo2023_06_08_14_16_48.ods
+	#rm warikoo2023_06_08_14_16_48.ods
 	rm welcome.txt
 	
 	echo "Flush the last tmp etc..." 
