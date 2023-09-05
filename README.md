@@ -23,10 +23,10 @@ Linux Commands frequently used by Linux Sysadmins – Part 1:
 14. top – shows an overall system view.
 15. vmstat – shows system memory, processes, interrupts, paging, block I/O, and CPU info.
 16. htop – interactive process viewer and manager.
-17. dstat – view processes, memory, paging, I/O, CPU, etc., in real-time. All-in-one for vmstat, iostat, netstat, and ifstat.
-18. iftop – network traffic viewer.
-19. nethogs – network traffic analyzer.
-20. iotop – interactive I/O viewer. Get an overview of storage r/w activity.
+**17. dstat – view processes, memory, paging, I/O, CPU, etc., in real-time. All-in-one for vmstat, iostat, netstat, and ifstat.**
+**18. iftop – network traffic viewer.**
+**19. nethogs – network traffic analyzer.
+20. iotop – interactive I/O viewer. Get an overview of storage r/w activity.**
 21. iostat – for storage I/O statistics.
 22. netstat – for network statistics.
 23. ss – utility to investigate sockets.
@@ -83,7 +83,7 @@ Linux Commands frequently used by Linux Sysadmins – Part 1:
 74. less – similar to the more command with additional features.
 75. tail – used to display the tail end of a text file or piped data.
 76. dmesg – prints the message buffer of the kernel ring.
-77. journalctl – query the systemd journal.
+**77. journalctl – query the systemd journal.**
 78. kill – terminate a process.
 79. killall  – Sends a kill signal to all instances of a process by name.
 80. sleep – suspends program execution for a specified time.
