@@ -13,7 +13,7 @@
 export DATETAG="$(date +'%Y_%m_%d_%H_%M_%S')"
 export DIRNAME="$(date +'%Y_%m_%d_%H_%M_%S')_Lenovo"
 
-#### Check Net is ( on : copy from github off: copy from template ###  
+#### Check Net is ( on : copy from github off: copy from template )###  
 wget -q --tries=2 --timeout=2 --spider http://google.com
 if [[ $? -eq 0 ]]; then
         echo "Online $?--"
