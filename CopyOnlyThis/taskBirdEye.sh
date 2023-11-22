@@ -8,7 +8,10 @@
 #~~                              1) This is first point 
 #~~ ~~~~~~~~111~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #aaaa 
-project=2Area
+result=${PWD##*/}.Test 
+echo $result 
+#project=4Archive.Travel
+project=${PWD##*/}   # the folder name in which the file is is taken as the project name to run the task and readme files 
 > taskw_$project.md  # erase file 
 touch -a readme_$project.md # touch and create if not existing. ( do not disturb modification time but only access time and change time  if already exists) 
 	echo "----------------WeeklyBurnDown $project --------------" >>taskw_$project.md  
