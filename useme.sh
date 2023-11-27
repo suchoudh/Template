@@ -1,18 +1,22 @@
-#a~~ ~~~~~WeekNumber is 32~~~~~***useme.sh ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#a~~   File                : useme.sh 
-#a~~   Creation DateTime   :32_Tue_20230808-11_24_37
-#a~~   Last Updated Date   :2023-11-24 Fri 01:06 PM 
-#a~~   End Date	
-#a~~   Author              : Sunil Choudhary 
-#a~~   Remarks             : CopyFilesFromGitorUseDesktopTemplate 
-#a~~   1: 2023-11-03 Fri 09:03 AM - cd to $DIRNAME as last step  
+#~~ ~~~~~WeekNumber is 32~~~~~***useme.sh ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~   File                : useme.sh 
+#~~   Creation DateTime   :32_Tue_20230808-11_24_37
+#~~   Last Updated Date   :2023-11-24 Fri 01:06 PM 
+#~~   End Date	
+#~~   Author              : Sunil Choudhary 
+#~~   Remarks             : CopyFilesFromGitorUseDesktopTemplate 
+#~~   1: 2023-11-03 Fri 09:03 AM - cd to $DIRNAME as last step  
 #a~~  2: 2023-11-24 Fri 12:44 PM - create in day with name as myToday and move to document with older name the offline is yet to be done 
-#a~~ ~~~~~~~~111~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#a~~  3: 2023-11-27 Mon 11:28 AM-- yesterday corrected 
+#~~ ~~~~~~~~111~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #aaaa
 #### Set env ###  
 . ~/.profile
-export DATETAG="$(date +'%Y_%m_%d_%H_%M_%S')"
-export DIRNAME="$(date +'%Y_%m_%d_%H_%M_%S')_Lenovo"
+#export DATETAG="$(date +'%Y_Wk%W_%m_%d_%H_%M_%S')"
+export DATETAG="$(date +'%Y_Wk%W_%m_%d')"
+export YESTERDAY=`date --date "-1 days"  +"%Y_Wk%W_%m_%d"`
+export DATETAG=$YESTERDAY # as myToday is shifted to documents on next day morning and not today 
+export DIRNAME=$DATETAG"_myToday"  # myDate is todays date it should be yesterday date ideally. 
 export MYTODAY="myToday"
 
 cd ~/    # Run this script from home directory always and not from ~/Desktop/$MYTODAY 
@@ -44,6 +48,7 @@ if [[ $? -eq 0 ]]; then
 	echo "====LAST FLUSH====" >> forecast.log
 	cd ~/Desktop  # get back to desktop 
 #	mv 2023* ~/Documents/
+	echo $DIRNAME
 	mv $MYTODAY ~/Documents/$DIRNAME
 	mv Template* ~/Documents/    # Flush  older template to documents as new is getting downloaded.  
 
