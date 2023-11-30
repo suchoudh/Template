@@ -3,6 +3,21 @@ GREEN='\033[0;32m'
 PURPLE='\033[0;35m'
 NC='\033[0m' # No Color
 
+## For reference Only 
+# Black        0;30     Dark Gray     1;30
+# Red          0;31     Light Red     1;31
+# Green        0;32     Light Green   1;32
+# Brown/Orange 0;33     Yellow        1;33
+# Blue         0;34     Light Blue    1;34
+# Purple       0;35     Light Purple  1;35
+# Cyan         0;36     Light Cyan    1;36
+# Light Gray   0;37     White         1;37
+
+# Log Format for forecast.log (to be done 30 nov 2023 ) 
+# Remark :Good Job Sunil | Task : Lunch | Estimate : 26 min | Actual: 27 min | Deviation : + 1 Min | % :  3% more 
+# Remark :UnderEstimated  | Task : Lunch | Estimate : 26 min | Actual: 66 min | Deviation : + 40 Min | % :  76% more time 
+# Remark :OverEstimated | Task : Lunch | Estimate : 26 min | Actual: 16 min | Deviation : - 4 Min | % :  15% less time 
+
 #Region --- Updates
 #    echo -e "${PURPLE}RUNNING: sudo apt update --fix-missing${NC}"
 
