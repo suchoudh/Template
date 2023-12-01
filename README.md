@@ -7,8 +7,9 @@ FEEDBACK is must.. you must respond to Feedback.. Listen to the response and res
 
 * [CopyOnlyThis](#postgresql)
 * [CopyOnlyThis](#CopyOnlyThis)
-* [Prisma](#prisma)
-* [Python](#python)
+
+- [UseMe](CopyOnlyThis/useme.sh)
+- [View Network Traffic For New Tabs](chrome/view-network-traffic-for-new-tabs.md)
   
 
 Linux Commands frequently used by Linux Sysadmins – Part 1:
