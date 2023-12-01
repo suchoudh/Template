@@ -5,6 +5,11 @@ can gitactions use $DATETAG ? to generate a new directory ?
 
 FEEDBACK is must.. you must respond to Feedback.. Listen to the response and respond to that Not blow your own trumpet 
 
+* [CopyOnlyThis](#postgresql)
+* [CopyOnlyThis](#CopyOnlyThis)
+* [Prisma](#prisma)
+* [Python](#python)
+  
 
 Linux Commands frequently used by Linux Sysadmins – Part 1:
 1. ip – from Iproute2, a collection of utilities for controlling TCP/IP networking and traffic control in Linux.
