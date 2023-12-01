@@ -7,8 +7,7 @@ FEEDBACK is must.. you must respond to Feedback.. Listen to the response and res
 
 * [CopyOnlyThis](#postgresql)
 * [CopyOnlyThis](#CopyOnlyThis)
-
-- [UseMe](CopyOnlyThis/useme.sh)
+- [CopyMe](CopyOnlyThis/CopyMe.sh)
 - [View Network Traffic For New Tabs](chrome/view-network-traffic-for-new-tabs.md)
   
 
