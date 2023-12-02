@@ -7,12 +7,16 @@
 #~~   Remarks             : CopyFilesFromGitorUseDesktopTemplate 
 #~~   1: 2023-11-03 Fri 09:03 AM - cd to $DIRNAME as last step  
 #a~~  2: 2023-11-24 Fri 12:44 PM - create in day with name as myToday and move to document with older name the offline is yet to be done 
+#a~~  3: 2023-11-27 Mon 11:28 AM-- yesterday corrected 
 #~~ ~~~~~~~~111~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #aaaa
 #### Set env ###  
 . ~/.profile
-export DATETAG="$(date +'%Y_%m_%d_%H_%M_%S')"
-export DIRNAME="$(date +'%Y_%m_%d_%H_%M_%S')_Lenovo"
+#export DATETAG="$(date +'%Y_Wk%W_%m_%d_%H_%M_%S')"
+export DATETAG="$(date +'%Y_Wk%W_%m_%d')"
+export YESTERDAY=`date --date "-1 days"  +"%Y_Wk%W_%m_%d"`
+export DATETAG=$YESTERDAY # as myToday is shifted to documents on next day morning and not today 
+export DIRNAME=$DATETAG"_myToday"  # myDate is todays date it should be yesterday date ideally. 
 export MYTODAY="myToday"
 
 cd ~/    # Run this script from home directory always and not from ~/Desktop/$MYTODAY 
@@ -44,13 +48,14 @@ if [[ $? -eq 0 ]]; then
 	echo "====LAST FLUSH====" >> forecast.log
 	cd ~/Desktop  # get back to desktop 
 #	mv 2023* ~/Documents/
-	mv $MYTODAY ~/Documents/$DIRNAME
-	mv Template* ~/Documents/    # Flush  older template to documents as new is getting downloaded.  
+	echo $DIRNAME
+	mv -i $MYTODAY ~/Documents/$DIRNAME
+	mv -f Template* ~/Documents/    # Flush  older template to documents as new is getting downloaded.  
 
 	git clone https://www.github.com/suchoudh/Template.git 
 	sleep 2
 	cp -r Template ~/Desktop/Template$DATETAG
-	mv Template $MYTODAY
+	mv -i Template $MYTODAY
 	touch "$MYTODAY"/"readme$DATETAG.md"
 	mv $MYTODAY/CopyOnlyThis/warikoToday.ods $MYTODAY/warikoo$DATETAG.ods
 	mv $MYTODAY/CopyOnlyThis/myCounter.sh $MYTODAY
