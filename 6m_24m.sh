@@ -18,17 +18,22 @@ NC='\033[0m' # No Color
 rows=3
 cols=3
 export DISPLAY=0.0
-
+askWhat () {
+read -p "What is your 24 min goal before a mandatory 6m stint  ?
+	" 
+}
 
 sixMin () {
 	mpg123 -q /home/rahu/Music/ShortBeep.mp3 
 	echo -e "${GREEN}next 6  `date --date "+6 mins"  +"%H_%M"`"  # helps calculate next ping time 
 	sleep 360 
+#	sleep 6 
 }
 twenty () {
 echo -e "${RED} 24 min --- " 
 }
 
+askWhat
 while true 
 do 
 twenty
