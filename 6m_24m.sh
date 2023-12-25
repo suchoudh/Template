@@ -6,6 +6,7 @@
 #x ~~   Author              : Sunil Choudhary 
 #x ~~   Remarks             : pomodoro but of 24 and 6 min 24x60=60x24 also 6x4=24 and 24+6=30 
 #x ~~                              1) find and add nescafe song as long 
+#x ~~ 				   2) Added Break with b or B or BBBB or bbb or BBbB 
 #x ~~ ~~~~111~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #a 
 #`date --date "+26 mins"  +"%H_%M"`
@@ -23,14 +24,35 @@ read -p "What is your 24 min goal before a mandatory 6m stint  ?
 	" 
 }
 
+# mybBreak () {
+# In the following line -t for timeout, -N for just 1 character
+#    read -t 0.25 -N 1 input
+#    if [[ $input = "q" ]] || [[ $input = "Q" ]]; then
+# The following line is for the prompt to appear on a new line.
+#        echo
+#        break 
+#    fi
+#}
+
 sixMin () {
 	mpg123 -q /home/rahu/Music/ShortBeep.mp3 
 	echo -e "${GREEN}next 6  `date --date "+6 mins"  +"%H_%M"`"  # helps calculate next ping time 
-	sleep 360 
-#	sleep 6 
+#	sleep 360 
+	sleep 6 
+# In the following line -t for timeout, -N for just 1 character
+    read -t 0.25 -N 1 input
+    if [[ $input = "b" ]] || [[ $input = "B" ]]; then
+# The following line is for the prompt to appear on a new line.
+        echo "Break time `date ` "
+         
+    fi
+
+
 }
 twenty () {
 echo -e "${RED} 24 min --- " 
+	mpg123 -q /home/rahu/Music/ShortBeep.mp3 
+	sleep 1 
 }
 
 askWhat
