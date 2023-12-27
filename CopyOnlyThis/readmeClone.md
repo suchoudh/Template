@@ -1,4 +1,4 @@
-# Week 
+# Week  and Tithi 
 ##### Location :: Indore sangam nagar 
 ##### What u Ate : 
   BF Tea + biscuit /Toast  : Seasonal fruit 
@@ -16,16 +16,26 @@ Polished Shoes PressedClothes : kept from yesterday night (May be your last day 
 * this is point 2  
 
 ##### Ripe for Doing. 
-- This is point 1 
-###### Send msg to HK sir 
+- This is point 1
+- This is point 2 
+##### PrAHAR system 
+- 1 4  Sleep 
+- 4 7   sleep 
+- 7 10  sleep 
+- 10 13
+- 13 16
+- 16 19 
+- 19 22  
+- 22 25(1)
+###### HKs aGiLe
   - WWWell
-    - Can not sustain yourself indefinately as yet and have to work nonetheless.      
+    - This is the good thing that i did yesterday       
   - WWWrong 
-    - The baked clay vs Unbaked clay. 
+    - According to me this is what happened wrong  
   -  WCBI 
-    -  Need a discussion on why we do not have a free tier as yet.  
+    -  This is what we need to improve upon   
 ###### Pomodoros using 6m_24m.sh 
-- 3.5p this is point 1 
+- 3p this is point 1 
 ##### Distraction Log 
 - 9:50 am -(30+ Min) on Whatsapp : was scrolling messags of last night and previous messages of friends. 
 
