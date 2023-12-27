@@ -37,6 +37,14 @@ Polished Shoes PressedClothes : kept from yesterday night (May be your last day 
 ###### Pomodoros using 6m_24m.sh 
 - 3p this is point 1 
 ##### Distraction Log 
-- 9:50 am -(30+ Min) on Whatsapp : was scrolling messags of last night and previous messages of friends. 
+- 1 4  Sleep 
+- 4 7   sleep 
+- 7 10  sleep
+  - 9:50 am -(30+ Min) on Whatsapp : was scrolling messags of last night and previous messages of friends.     
+- 10 13
+- 13 16
+- 16 19 
+- 19 22  
+- 22 25(1)
 
 
