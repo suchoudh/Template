@@ -48,31 +48,7 @@ Brush No Bath No Shave No:
 - This is point 1
 - This is point 2 
 ##### PrAHAR system 
-- 1 3 Deep Sleep   
-- 3 6 
-    -    Walk prepare for marathan and then EBC
-    -    Surya Dev Darshan  
-- 6 9   PRAHAR 1 
-    -    Hygiene
-    -    Clothes
-    -    BF
-    -    Move out of home         
-- 9 12  PRAHAR 2 
-    -   Creative Official Hours A   
-- 12 15 PRAHAR 3
-    -   Communicate Official Hour     
-- 15 18  Meet + Social Time
-    -   Come back home   
-- 18 21 PRAHAR 4
-    -   Family Time 
-    -   Social Time
-    -   < Unplanned hours >        
-- 21 25(1)
-    -   Books and Notes and Papers
-    -   Prepare for tomorrow
-    -   Liten to Raag Yaman
-    -   Use analog Clock alarm
-    -   Study books before sleeping  
+ use the google calender 
 ###### HKs aGiLe
   - WWWell
     - This is the good thing that i did yesterday       
