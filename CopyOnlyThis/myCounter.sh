@@ -73,9 +73,6 @@ echo -e "${RED} 24 min --- "
 }
 
 
-cat tmp.log >> ~/Desktop/Doday/DoDayforecast$OUTPUT.log   # Concatenate to home folder  file as well  
-echo $myPWD >> ~/Desktop/Doday/DoDayforecast$OUTPUT.log   # Concatenate to home folder  file as well  
-
 while true
 do
 #	echo $COUNTER seconds remaining in $TASKNOTE for mandatory break :: press q/Q to quit  # this line colour to change based on 
@@ -88,15 +85,15 @@ do
 	
 if [ $COUNTER -lt -60 ]    # within time  is ok  
 then
-    echo -e "${YELLOW} Countdown:$COUNTER ::  $Percentage % Time Used from Allocated $Actual minutes to do $TASKNOTE.:: `date` ${NC}" 
-    echo -e "${YELLOW} Countdown:$COUNTER ::  $Percentage % Time Used from Allocated $Actual minutes to do $TASKNOTE.:: `date` ${NC}" > tmp.log  # Second line to log it 
+    echo -e "${YELLOW} Countdown:$COUNTER ::  $Percentage % Time Used from Allocated $PREDICTED minutes to do $TASKNOTE.:: `date` ${NC}" 
+    echo -e "${YELLOW} Countdown:$COUNTER ::  $Percentage % Time Used from Allocated $PREDICTED minutes to do $TASKNOTE.:: `date` ${NC}" > tmp.log  # Second line to log it 
 elif [ $COUNTER -gt 60 ]  # more than a min late is late. 
 then
-    echo -e "${GREEN} Countdown:$COUNTER :: $Percentage % Time Used from Allocated $Actual minutes to do $TASKNOTE.:: `date`  ${NC}" 
-    echo -e "${GREEN} Countdown:$COUNTER :: $Percentage % Time Used from Allocated $Actual minutes to do $TASKNOTE.:: `date`  ${NC}" > tmp.log  
+    echo -e "${GREEN} Countdown:$COUNTER :: $Percentage % Time Used from Allocated $PREDICTED minutes to do $TASKNOTE.:: `date`  ${NC}" 
+    echo -e "${GREEN} Countdown:$COUNTER :: $Percentage % Time Used from Allocated $PREDICTED minutes to do $TASKNOTE.:: `date`  ${NC}" > tmp.log  
 else   # within a min is bulls eye 
-    echo -e "${PURPLE} Countdown:$COUNTER :: $Percentage % Time Used from Allocated $Actual minutes to do $TASKNOTE. Good Job Sunil::  `date` ${NC}" 
-    echo -e "${PURPLE} Countdown:$COUNTER :: $Percentage % Time Used from Allocated $Actual minutes to do $TASKNOTE. Good Job Sunil::  `date` ${NC}"  > tmp.log  # 
+    echo -e "${PURPLE} Countdown:$COUNTER :: $Percentage % Time Used from Allocated $PREDICTED minutes to do $TASKNOTE. Good Job Sunil::  `date` ${NC}" 
+    echo -e "${PURPLE} Countdown:$COUNTER :: $Percentage % Time Used from Allocated $PREDICTED minutes to do $TASKNOTE. Good Job Sunil::  `date` ${NC}"  > tmp.log  # 
 fi
 
 sleep 1
@@ -108,6 +105,8 @@ sleep 1
         echo
 	cat tmp.log >> forecast$OUTPUT.log   # Concatenate to old logs 
 	cat tmp.log >> $LOGGER/forecast.log   # Concatenate to logger file as well  
+	cat tmp.log >> ~/Desktop/Doday/DoDayforecast$OUTPUT.log   # Concatenate to home folder  file as well  
+	echo $myPWD >> ~/Desktop/Doday/DoDayforecast$OUTPUT.log   # Concatenate to home folder  file as well  	
 	echo --- flushed at `date`---  >tmp.log 
         break 
     fi
