@@ -1,7 +1,7 @@
 #x ~~~~~~***myCounter.sh~~~~WeekNumber is 48 ~~~
 #x ~~   File                :myCounter.sh 
 #x ~~   Creation DateTime   :48_Fri_20231201-10_41_16
-#x ~~   Last Updated Date   :2024-04-24 Wed 01:36 PM
+#x ~~   Last Updated Date   :2024-04-27 Sat 09:40 PM
 #x ~~   End Date	
 #x ~~   Author              : Sunil Choudhary 
 #x ~~   Remarks             : TimeMyWorkAginstmyEstimates 
@@ -9,6 +9,7 @@
 #x ~~                              2) need start time and end time without seconds as sometimes there is a break 
 #x ~~				   3) start time/ end time /over time  countdown 
 #x ~~				   4) default is 6 min message is also improved 24 apr 2024 
+#x ~~				   4) Decimal Linear % Increase  27 apr 2024 
 #x ~~ ~~~~111~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #a 
 touch NextAction.md   # will create a file which  can contain the next action tasks for today and near foreseen future. 
@@ -40,17 +41,17 @@ NORMAL="\033[m"
 echo Enter TaskName   # Only enter the time you want to dedicate yourself to  
 read TASKNOTE
 #TASKNOTE=$2
-COUNTER=$1
-PREDICTED="${COUNTER:=12}" # if counter is not set it defaults to 12 min ideally to use multiples of 12 min 
-
+COUNTER=0
+# if counter is not set it defaults to 12 min ideally to use multiples of 12 min 
 # FOO="${VARIABLE:-default}"  # FOO will be assigned 'default' value if VARIABLE not set or null.
 # The value of VARIABLE remains untouched.
 
 #FOO="${VARIABLE:=default}"  # If VARIABLE not set or null, set it's value to 'default'. 
 # Then that value will be assigned to FOO
-
-
-COUNTER=$(( COUNTER * 60 ))
+PREDICTED=$1 
+PREDICTED="${PREDICTED:=12}"
+TEST="$(($PREDICTED*60))"
+TIMELEFTINSEC=$TEST
 #myPWD=$(( `pwd` ))
 #myPWD=$(cd `dirname $0` && pwd)
 myPWD=$(pwd)
@@ -76,24 +77,26 @@ echo -e "${RED} 24 min --- "
 while true
 do
 #	echo $COUNTER seconds remaining in $TASKNOTE for mandatory break :: press q/Q to quit  # this line colour to change based on 
-	COUNTER=$(( COUNTER - 1 ))
-	z=$(($COUNTER / 60))
+	COUNTER=$(( COUNTER + 1 ))
+	TIMELEFTINSEC=$(( TIMELEFTINSEC -1))
 #	z=$(($PREDICTED / 60))
-	Actual=$(($PREDICTED-$z))   # minus as my z is negative and --=+ 
-	Percentage=$((($PREDICTED-$z)*100/$PREDICTED))   # minus as my z is negative and --=+ 
-#	echo $Actual
+#	Actual=$(($PREDICTED-$z))   # minus as my z is negative and --=+ 
+#	Percentage=$((($PREDICTED-$z)*100/$PREDICTED))   # minus as my z is negative and --=+ 
+#	Percentage=$(bc <<<"scale=1;(($PREDICTSEC-$COUNTER)*100)/$PREDICTSEC")
+	PERCENTAGE=$(bc <<<"scale=1;(($TEST-$COUNTER)*100)/$TEST")
+#	echo Percentage is $PERCENTAGE
 	
-if [ $COUNTER -lt -60 ]    # within time  is ok  
+if [ $TIMELEFTINSEC -lt -60 ]    # within time  is ok  
 then
-    echo -e "${YELLOW} Countdown:$COUNTER ::  $Percentage % Time Used from Allocated $PREDICTED minutes to do $TASKNOTE.:: `date` ${NC}" 
-    echo -e "${YELLOW} Countdown:$COUNTER ::  $Percentage % Time Used from Allocated $PREDICTED minutes to do $TASKNOTE.:: `date` ${NC}" > tmp.log  # Second line to log it 
-elif [ $COUNTER -gt 60 ]  # more than a min late is late. 
+    echo -e "${YELLOW} Countdown:$TIMELEFTINSEC::  $PERCENTAGE % Extra Time Used from Allocated $PREDICTED minutes to do $TASKNOTE.:: `date` ${NC}" 
+    echo -e "${YELLOW} Countdown:$TIMELEFTINSEC ::  $PERCENTAGE % Extra Time Used from Allocated $PREDICTED minutes to do $TASKNOTE.:: `date` ${NC}" > tmp.log  # Second line to log it 
+elif [ $TIMELEFTINSEC -gt 60 ]  # more than a min late is late. 
 then
-    echo -e "${GREEN} Countdown:$COUNTER :: $Percentage % Time Used from Allocated $PREDICTED minutes to do $TASKNOTE.:: `date`  ${NC}" 
-    echo -e "${GREEN} Countdown:$COUNTER :: $Percentage % Time Used from Allocated $PREDICTED minutes to do $TASKNOTE.:: `date`  ${NC}" > tmp.log  
+    echo -e "${GREEN} Countdown:$TIMELEFTINSEC :: $PERCENTAGE Percentage % of Full Time Left from Allocated $PREDICTED minutes to do $TASKNOTE.:: `date`  ${NC}" 
+    echo -e "${GREEN} Countdown:$TIMELEFTINSEC :: $PERCENTAGE Percentage % of Full Time Left from Allocated $PREDICTED minutes to do $TASKNOTE.:: `date`  ${NC}" > tmp.log  
 else   # within a min is bulls eye 
-    echo -e "${PURPLE} Countdown:$COUNTER :: $Percentage % Time Used from Allocated $PREDICTED minutes to do $TASKNOTE. Good Job Sunil::  `date` ${NC}" 
-    echo -e "${PURPLE} Countdown:$COUNTER :: $Percentage % Time Used from Allocated $PREDICTED minutes to do $TASKNOTE. Good Job Sunil::  `date` ${NC}"  > tmp.log  # 
+    echo -e "${PURPLE} Countdown:$TIMELEFTINSEC :: Last 2 minutes of  Allocated $PREDICTED minutes to do $TASKNOTE. Good Job Sunil::  `date` ${NC}" 
+    echo -e "${PURPLE} Countdown:$TIMELEFTINSEC :: Last 2 minutes  Allocated $PREDICTED minutes to do $TASKNOTE. Good Job Sunil::  `date` ${NC}"  > tmp.log  # 
 fi
 
 sleep 1
