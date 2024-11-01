@@ -3,6 +3,13 @@
 # Location :: 
         Indore SangamNagar Ananda  
         Bhopal Kolonizer GreenRoom Studio   
+        
+# FlowTime                                                           
+Date  Task TimeStart TimeStop   Interrupted  WorkTime   Brea    kTime.
+          
+
+
+
 # Sit 60 min Dhruva for his XII IIT progress
 Daily short tests that he has to do in front of you. and you analyse the solutions together. 
 
