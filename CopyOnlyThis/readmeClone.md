@@ -3,9 +3,11 @@
 # Location :: 
         Indore SangamNagar Ananda  
         Bhopal Kolonizer GreenRoom Studio
-# Project words : Finalize , Lookinto , Organize , Ensure, Install , resolve, Submit, Design , Rollout, Implement, Handle , Maximize, Complete , Update, Setup 
+# Project words : 
+Finalize , Lookinto , Organize , Ensure, Install , resolve, Submit, Design , Rollout, Implement, Handle , Maximize, Complete , Update, Setup 
 
-# Next Action Words: Call, Organize , Email, Buy, Purge, Print,Load,Fill out, Lookinto, Take, Draft , Review, Find, Gather, WaitingTo 
+# Next Action Words: 
+Call, Organize , Email, Buy, Purge, Print,Load,Fill out, Lookinto, Take, Draft , Review, Find, Gather, WaitingTo 
         
 # FlowTime                                                           
 Date  Task TimeStart TimeStop   Interrupted  WorkTime   BreakTime.
