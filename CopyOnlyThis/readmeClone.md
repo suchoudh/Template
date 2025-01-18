@@ -1,4 +1,4 @@
-# Yr 2024 Week 
+# Yr 2025 Week 
   Tithi Shukl / Krishn Paksha 
 # Location :: 
         Indore SangamNagar Ananda  
@@ -8,16 +8,11 @@ Finalize , Lookinto , Organize , Ensure, Install , resolve, Submit, Design , Rol
 
 # Next Action Words: 
 Call, Organize , Email, Buy, Purge, Print,Load,Fill out, Lookinto, Take, Draft , Review, Find, Gather, WaitingTo 
-        
-# FlowTime                                                           
+# FlowTime
 Date  Task TimeStart TimeStop   Interrupted  WorkTime   BreakTime.
-          
-
-
-
-# Sit 60 min Dhruva for his XII IIT progress
+# Sit 60 min Dhruva
+His XII IIT progress
 Daily short tests that he has to do in front of you. and you analyse the solutions together. 
-
     Physics 
     Chemistry 
     Maths 
@@ -25,55 +20,55 @@ Daily short tests that he has to do in front of you. and you analyse the solutio
     Music Exam 
     Fine Arts 
     English Comprehension 
-
-## Hygiene :: 
-Brush No Bath No Shave No:
-  Did you go out last evening 
-  Shave in evening (if going out). 
-  Are Clean clothes available (Home wear and outside wear ): Yes No 
-  Polished Shoes PressedClothes : Kept from yesterday night (May be your last day prepare thus): Yes No dah dah pach pach 
+## Hygiene
+- [ ] Brush No Bath No Shave No:
+- [ ] Did you go out last evening
+- [ ] Shave in evening (if going out).
+- [ ] Are Clean clothes available (Home wear and outside wear ): Yes No
+- [ ] Polished Shoes PressedClothes : Kept from yesterday night (May be your last day prepare thus): Yes No dah dah pach pach 
 ## What u Ate : 
-  BF 
-    Tea + biscuit /Toast  
-    One Seasonal fruit 
-  Lunch  
-    Dal Dalia Sabji Roti
-    Plate of salad  
-  Dinner 
-    Dal Dalia Sabji Roti 
-    (Keep Light) 
-  ChatterPatter  : 
-    Tea + some namkeen  
+###  BF 
+- [ ] Tea + biscuit /Toast
+- [ ] One Seasonal fruit 
+### Lunch  
+- [ ] Dal Dalia Sabji Roti
+- [ ] Plate of salad
+### Dinner 
+- [ ] Dal Dalia Sabji Roti (Keep Light) 
+- [ ]   ChatterPatter  :
+- [ ]   Tea + some namkeen  
 ## Pooja : 
-    Meditation 
-    Pooja in Home Temple 
-    Agarbatti 
-    Diya 
+- [ ] Meditation
+- [ ] Pooja in Home Temple
+- [ ] Agarbatti
+- [ ] Diya 
 ## What 40+min : yoga/excercise/walk ¿
-    walk
-    garden
-    yoga
-    excercise   
+- [ ] walk
+- [ ] garden
+- [ ] yoga
+- [ ] excercise   
 # Any health remarks 
-    Anything that body told you in last few days 
+	Anything that body told you in last few days 
 # What Changed (Recently) 
 * this is point 1
 * this is point 2  
 # Ripe for Doing. 
 - This is point 1
 - This is point 2 
-# PrAHAR system 
+# Prahar system 
  use the google calender 
-# HKs aGiLe
-  - WWWell
-    - This is the good thing that i did yesterday       
-  - WWWrong 
-    - According to me this is what happened wrong  
-  -  WCBI 
-    -  This is what we need to improve upon   
+# HKs aGiLe 
+- WWWell
+- This is the good thing that i did yesterday
+WWWrong 
+- According to me this is what happened wrong
+WCBI
+- This is what we need to improve upon   
 ## Pomodoros using 6m_24m.sh 
 - 3p this is point 1 
-# Things I loved that Improved focus 
-# Things I hate that Created Distraction 
-
+# Things that Improved focus 
+- this is first i discovered
+- this is second one 
+# Things that Created Distraction 
 PS : Create distraction / Focus log on a physical page and file it in monthly folders 
+**make a special entry for gaps **
