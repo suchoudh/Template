@@ -11,7 +11,7 @@ Call, Organize , Email, Buy, Purge, Print,Load,Fill out, Lookinto, Take, Draft ,
 # FlowTime
 Date  Task TimeStart TimeStop   Interrupted  WorkTime   BreakTime.
 # Sit 60 min Dhruva
-His XII IIT progress
+His  NIOS/Competitive exam progress
 Daily short tests that he has to do in front of you. and you analyse the solutions together. 
     Physics 
     Chemistry 
